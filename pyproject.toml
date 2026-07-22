@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyredis"
+version = "0.1.0"
+description = "A Redis server clone built from scratch in Python"
+requires-python = ">=3.10"
+
+[project.scripts]
+pyredis = "pyredis.server:main"
+
+[tool.setuptools]
+packages = ["pyredis"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
